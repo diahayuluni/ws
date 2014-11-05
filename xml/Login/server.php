@@ -23,7 +23,7 @@
     function login_ws($username, $password) { //enkripsi password dengan md5 $password = md5($password);
       //buat koneksi
       $db = NewADOConnection('mysql');
-      $db -> Connect('localhost','root','','module_sit'); //cek username dan password dari database
+      $db -> Connect('localhost','root','','mahasiswa'); //cek username dan password dari database
       $sql = $db -> Execute("SELECT * FROM user where username='$username' AND password='$password'");
       //Cek adanya username dan password di database
       if ($sql->RecordCount() >= 1) //sama dengan mysql_num_rows pada php biasa
